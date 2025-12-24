@@ -1,0 +1,8 @@
+export enum TravelStyle {
+  RELAX = 'RELAX',
+  ADVENTURE = 'ADVENTURE',
+  CULTURAL = 'CULTURAL',
+  PARTY = 'PARTY',
+  NATURE = 'NATURE',
+  GASTRONOMIC = 'GASTRONOMIC',
+}
