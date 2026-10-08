@@ -1,6 +1,6 @@
 import { Continent } from '../enums/Continent';
 import { DestinationType } from '../enums/DestinationType';
-import { ClimatePreference } from '../enums/ClimatePreferece';
+import { ClimatePreference } from '../enums/ClimatePreference';
 import { CostLevel } from '../enums/CostLevel';
 import { TravelStyle } from '../enums/TravelStyle';
 
@@ -48,5 +48,19 @@ export class Destination {
     this.types = params.types;
     this.styles = params.styles;
     this.costLevel = params.costLevel;
+  }
+
+  /**
+   * Verifica si el destino coincide con un estilo de viaje específico.
+   */
+  public matchesStyle(style: TravelStyle): boolean {
+    return this.styles.includes(style);
+  }
+
+  /**
+   * Verifica si el destino coincide con un tipo específico.
+   */
+  public matchesType(type: DestinationType): boolean {
+    return this.types.includes(type);
   }
 }
