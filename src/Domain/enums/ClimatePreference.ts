@@ -3,4 +3,5 @@ export enum ClimatePreference {
   COLD = 'COLD',
   TEMPERATE = 'TEMPERATE',
   ANY = 'ANY',
+  TROPICAL = 'TROPICAL',
 }

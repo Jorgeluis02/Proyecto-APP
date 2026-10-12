@@ -1,19 +1,21 @@
-import { ClimatePreference } from '../enums/ClimatePreference';
-import { CostLevel } from '../enums/CostLevel';
-import { TravelStyle } from '../enums/TravelStyle';
+import { TravelPreferences } from './TravelPreferences';
 
-export class TravelPreferences {
-  public readonly climate: ClimatePreference;
-  public readonly costLevel: CostLevel;
-  public readonly styles: TravelStyle[];
+export class UserProfile {
+  public readonly id: string;
+  public readonly name: string;
+  public readonly preferences: TravelPreferences;
 
   constructor(params: {
-    climate: ClimatePreference;
-    costLevel: CostLevel;
-    styles: TravelStyle[];
+    id: string;
+    name: string;
+    preferences: TravelPreferences;
   }) {
-    this.climate = params.climate;
-    this.costLevel = params.costLevel;
-    this.styles = params.styles;
+    if (!params.name) {
+      throw new Error('User name is required');
+    }
+
+    this.id = params.id;
+    this.name = params.name;
+    this.preferences = params.preferences;
   }
 }
